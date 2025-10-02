@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SN-Élégance-221</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #111;
+      color: #f5f5f5;
+    }
+    header {
+      background: black;
+      color: gold;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      max-height: 80px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    p.slogan {
+      font-style: italic;
+      color: #ddd;
+    }
+    .container {
+      padding: 20px;
+    }
+    .product {
+      background: #1a1a1a;
+      border: 1px solid gold;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    .product h3 {
+      color: gold;
+    }
+    .gallery {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    .gallery img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 2px solid gold;
+      transition: transform 0.2s;
+    }
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+    .btn {
+      background: gold;
+      color: black;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background: #d4af37;
+    }
+    #cart {
+      background: #222;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 10px;
+      border: 1px solid gold;
+    }
+    footer {
+      background: black;
+      color: gold;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="https://i.postimg.cc/gkLfP4DC/SN-Elegange.png" alt="Logo SN-Élégance">
+  <h1>SN-Élégance 221</h1>
+  <p class="slogan">Des tissus de prestige pour donner vie à votre élégance unique.</p>
+</header>
+
+<div class="container">
+
+  <!-- MAGNUM -->
+  <div class="product">
+    <div class="gallery">
+      <img src="https://i.postimg.cc/rpVfPpbQ/IMG-20250927-WA0068.jpg" onclick="openImage(this.src)">
+      <img src="https://i.postimg.cc/B6tLy5M9/IMG-20250927-WA0065.jpg" onclick="openImage(this.src)">
+      <img src="https://i.postimg.cc/rFRGzTGL/IMG-20250917-WA0011.jpg" onclick="openImage(this.src)">
+    </div>
+    <h3>Getzner Magnum Gold</h3>
+    <p>✨ Brillance durable et éclatante<br>✨ Confort premium et toucher doux<br>✨ Idéal pour les occasions spéciales</p>
+    <p><strong>Prix :</strong> 11.000 CFA / mètre</p>
+    <input type="number" id="magnum-qty" value="1" min="1"> m
+    <button class="btn" onclick="addToCart('Getzner Magnum Gold', 11000, document.getElementById('magnum-qty').value)">Ajouter au panier</button>
+  </div>
+
+  <!-- BROCADE -->
+  <div class="product">
+    <div class="gallery">
+      <img src="https://i.postimg.cc/RZ6SnMGb/IMG-20250927-WA0101.jpg" onclick="openImage(this.src)">
+      <img src="https://i.postimg.cc/XJ0YbTfm/IMG-20250927-WA0088.jpg" onclick="openImage(this.src)">
+      <img src="https://i.postimg.cc/7h96Xm2q/IMG-20250927-WA0087.jpg" onclick="openImage(this.src)">
+    </div>
+    <h3>Getzner Brocade</h3>
+    <p>✨ Aspect raffiné avec motifs intégrés<br>✨ Épaisseur et résistance supérieures<br>✨ Parfait pour les vêtements traditionnels</p>
+    <p><strong>Prix :</strong> 13.000 CFA / mètre</p>
+    <input type="number" id="brocade-qty" value="1" min="1"> m
+    <button class="btn" onclick="addToCart('Getzner Brocade', 13000, document.getElementById('brocade-qty').value)">Ajouter au panier</button>
+  </div>
+
+  <!-- WIFI -->
+  <div class="product">
+    <div class="gallery">
+      <img src="https://i.postimg.cc/6QbFVR3b/IMG-20250917-WA0029-1.jpg" onclick="openImage(this.src)">
+      <img src="https://i.postimg.cc/Wbrj293k/IMG-20250917-WA0042.jpg" onclick="openImage(this.src)">
+      <img src="https://i.postimg.cc/zGnQQ6fB/IMG-20250917-WA0034.jpg" onclick="openImage(this.src)">
+    </div>
+    <h3>Getzner Wifi</h3>
+    <p>✨ Tissu léger et respirant<br>✨ Motifs modernes et élégants<br>✨ Convient à un usage quotidien ou événementiel</p>
+    <p><strong>Prix :</strong> 13.000 CFA / mètre</p>
+    <input type="number" id="wifi-qty" value="1" min="1"> m
+    <button class="btn" onclick="addToCart('Getzner Wifi', 13000, document.getElementById('wifi-qty').value)">Ajouter au panier</button>
+  </div>
+
+  <!-- FOCUS -->
+  <div class="product">
+    <div class="gallery">
+      <img src="https://i.postimg.cc/prsjy2kW/IMG-20250927-WA0035.jpg" onclick="openImage(this.src)">
+      <img src="https://i.postimg.cc/4dzb4krF/IMG-20250927-WA0044.jpg" onclick="openImage(this.src)">
+      <img src="https://i.postimg.cc/Qt5SBWW9/IMG-20250927-WA0038.jpg" onclick="openImage(this.src)">
+    </div>
+    <h3>Getzner Focus</h3>
+    <p>✨ Texture douce et agréable<br>✨ Durable et résistant<br>✨ Polyvalent : boubous, chemises, ensembles</p>
+    <p><strong>Prix :</strong> 14.000 CFA / mètre</p>
+    <input type="number" id="focus-qty" value="1" min="1"> m
+    <button class="btn" onclick="addToCart('Getzner Focus', 14000, document.getElementById('focus-qty').value)">Ajouter au panier</button>
+  </div>
+
+  <!-- Panier -->
+  <div id="cart">
+    <h2>🛒 Votre Panier</h2>
+    <ul id="cart-items"></ul>
+    <p><strong>Total :</strong> <span id="cart-total">0</span> CFA</p>
+    <a id="whatsapp-link" target="_blank">
+      <button class="btn">Commander via WhatsApp</button>
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  📞 Téléphone : +221 754 43 74 91 / +221 784 32 47 45 <br>
+  © 2025 SN-Élégance 221 - Tous droits réservés
+</footer>
+
+<script>
+let cart = [];
+function addToCart(product, price, qty) {
+  qty = parseInt(qty);
+  if (qty > 0) {
+    cart.push({product, price, qty});
+    updateCart();
+  }
+}
+function updateCart() {
+  const cartItems = document.getElementById("cart-items");
+  const cartTotal = document.getElementById("cart-total");
+  cartItems.innerHTML = "";
+  let total = 0;
+  let message = "Bonjour, je souhaite commander :%0A";
+  cart.forEach(item => {
+    let li = document.createElement("li");
+    li.textContent = `${item.qty} m de ${item.product} - ${item.price * item.qty} CFA`;
+    cartItems.appendChild(li);
+    total += item.price * item.qty;
+    message += `- ${item.qty} m de ${item.product} (%20${item.price * item.qty} CFA)%0A`;
+  });
+  cartTotal.textContent = total;
+  document.getElementById("whatsapp-link").href =
+    `https://wa.me/221754437491?text=${message}Total : ${total} CFA`;
+}
+function openImage(src) {
+  const modal = document.createElement("div");
+  modal.style.position = "fixed";
+  modal.style.top = 0;
+  modal.style.left = 0;
+  modal.style.width = "100%";
+  modal.style.height = "100%";
+  modal.style.background = "rgba(0,0,0,0.8)";
+  modal.style.display = "flex";
+  modal.style.alignItems = "center";
+  modal.style.justifyContent = "center";
+  modal.style.zIndex = 1000;
+  modal.innerHTML = `<img src="${src}" style="max-width:90%;max-height:90%;border:5px solid white;border-radius:10px;">`;
+  modal.onclick = () => document.body.removeChild(modal);
+  document.body.appendChild(modal);
+}
+</script>
+
+</body>
+</html>
